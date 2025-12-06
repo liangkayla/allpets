@@ -2,23 +2,23 @@ import os
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi.requests import Request
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from pydantic import BaseModel
-from transformers import CLIPProcessor, CLIPModel
-from PIL import Image
-from io import BytesIO
-from duckduckgo_search import DDGS
-from duckduckgo_search.exceptions import RatelimitException
-from langchain_community.document_loaders import AsyncChromiumLoader
-from langchain_community.document_transformers import BeautifulSoupTransformer
-import asyncio
-import time
-import traceback
-import re
-import requests
-import httpx
-from bs4 import BeautifulSoup
+# from fastapi.requests import Request
+# from transformers import AutoTokenizer, AutoModelForCausalLM
+# from pydantic import BaseModel
+# from transformers import CLIPProcessor, CLIPModel
+# from PIL import Image
+# from io import BytesIO
+# from duckduckgo_search import DDGS
+# from duckduckgo_search.exceptions import RatelimitException
+# from langchain_community.document_loaders import AsyncChromiumLoader
+# from langchain_community.document_transformers import BeautifulSoupTransformer
+# import asyncio
+# import time
+# import traceback
+# import re
+# import requests
+# import httpx
+# from bs4 import BeautifulSoup
 
 app = FastAPI()
 
