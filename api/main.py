@@ -31,8 +31,8 @@ DEVICE = 'cpu'
 phi = None
 tokenizer = None
 
-class Query(BaseModel):
-    prompt: str
+# class Query(BaseModel):
+#     prompt: str
 
 # clip zero-classification model
 CLASSES = ['dog', 'cat', 'rabbit', 'hamster', 'guinea pig', 'parakeet', 'parrot', 'rat', 'mouse', 'chinchilla', 'ferret', 'horse', 'pony', 'goldfish', 'turtle', 'lizard', 'snake', 'frog', 'crab', 'gerbil', 'hedgehog', 'canary', 'finch', 'cockatiel', 'macaw', 'dove', 'sugar glider', 'goat', 'sheep', 'pig', 'donkey', 'betta fish', 'koi fish', 'axolotl', 'newt', 'iguana', 'gecko', 'tarantula', 'scorpion']
