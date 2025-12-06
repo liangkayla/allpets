@@ -2,7 +2,7 @@ import os
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-# from fastapi.requests import Request
+from fastapi.requests import Request
 # from transformers import AutoTokenizer, AutoModelForCausalLM
 # from pydantic import BaseModel
 # from transformers import CLIPProcessor, CLIPModel
