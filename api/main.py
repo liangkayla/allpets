@@ -1,5 +1,4 @@
 import os
-import torch
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -58,7 +57,7 @@ def load_model():
     if not os.path.isdir(MODEL_PATH) and not os.path.exists(MODEL_PATH + ".zip"):
         raise RuntimeError(f"Phi model path not found: {MODEL_PATH}")
     
-    phi = AutoModelForCausalLM.from_pretrained(MODEL_PATH, trust_remote_code=True, device_map="auto" if torch.cuda.is_available() else None)
+    phi = AutoModelForCausalLM.from_pretrained(MODEL_PATH, trust_remote_code=True)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH, trust_remote_code=True)
     phi.to('cpu')
     phi.eval()
@@ -98,10 +97,12 @@ async def classify(file: UploadFile = File(...)):
     
     inputs = processor(text=CLASSES, images=[image], return_tensors="pt", padding=True)
 
-    with torch.no_grad():
-        outputs = clip(**inputs)
-        logits_per_image = outputs.logits_per_image
-        probs = logits_per_image.softmax(dim=1)
-
-    prediction = CLASSES[torch.argmax(probs[0])]
+    outputs = clip(**inputs)
+    logits_per_image = outputs.logits_per_image
+    probs = logits_per_image.softmax(dim=1)
+    
+    row = probs[0].tolist()
+    max_index = row.index(max(row))
+    prediction = CLASSES[max_index]
+    
     return {'response': prediction}
