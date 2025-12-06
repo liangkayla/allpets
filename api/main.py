@@ -43,10 +43,10 @@ processor = None
 async def health():
     return { 'status': 'healthy' }
 
-# @app.get("/{rest_of_path:path}")
-# async def react_app(req: Request, rest_of_path: str):
-#     print(f'Rest of path: {rest_of_path}')
-#     return templates.TemplateResponse('index.html', { 'request': req })
+@app.get("/{rest_of_path:path}")
+async def react_app(req: Request, rest_of_path: str):
+    print(f'Rest of path: {rest_of_path}')
+    return templates.TemplateResponse('index.html', { 'request': req })
 
 # @app.on_event('startup')
 # def load_model():
