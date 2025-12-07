@@ -3,3 +3,4 @@ uvicorn[standard]==0.21.1
 transformers>=4.30
 Pillow
 peft
+torch
