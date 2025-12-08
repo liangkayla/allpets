@@ -22,9 +22,9 @@ templates = Jinja2Templates(directory="../ui/build")
 app.mount('/static', StaticFiles(directory="../ui/build/static"), name='static')
 
 # defining phi model paths (base & fine-tuned weights)
-ADAPTER_PATH = os.path.join(os.path.dirname(__file__), 'content/my_phi_model')  # adapter folder you uploaded
-BASE_MODEL = "/mnt/models/phi-1_5_snapshot"     # <-- ensure this points to the folder that contains config.json & model.safetensors
-DEVICE = 'cpu'                       # set to 'cuda' if you have GPU & CUDA configured
+ADAPTER_PATH = os.path.join(os.path.dirname(__file__), 'content/my_phi_model')
+BASE_MODEL = "/mnt/models/phi-1_5_snapshot"
+DEVICE = 'cpu'
 
 # initializing phi & clip models, text queries, and image classes
 base = None
