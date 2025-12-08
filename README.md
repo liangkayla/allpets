@@ -8,7 +8,8 @@ http://ec2-18-224-202-87.us-east-2.compute.amazonaws.com:8000/
 The ML models used in this web app may take up to a minute to generate text responses and classify images. Please allow the models enough time to complete inference!
 
 # Video Links
-[Project Demo]()
+[Project Demo](videos/project_demo.mp4)
+
 [Technical Walkthrough]()
 
 # Evaluation
