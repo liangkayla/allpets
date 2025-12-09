@@ -16,7 +16,7 @@ Duke University CS372 HW6 Part 1: SFT Instruction Tuning
 - Used as a resource to learn about fine-tuning Phi-1.5. Some code chunks (list of hyperparameters, PrintLossCallback class) were pulled directly.
 
 OpenAI's ChatGPT
-- Used to generate most of the JS, HTML, and CSS code in the [front-end](ui/src/pages/home/index.tsx) of the application.
+- Used to generate some of the non-ML related code, such as the HTML/CSS code in the [front-end](src/ui/src/pages/home/index.tsx) of the application.
 
 Hugging Face Transformers, PyTorch, PEFT (Parameter-Efficient Fine-Tuning), Pillow (Python Imaging Library)
 - Libraries used to fine-tune and run ML models, and access image files.
