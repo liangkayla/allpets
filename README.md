@@ -20,6 +20,8 @@ Full Prompt Engineering Comparison Table
 
 ![Prompt Engineering Full Evaluation](images/prompts_full.png "Prompts Full")
 
+Inference times are reported in the above table under the column name "time_s".
+
 Simplified Prompt Engineering Comparison Table - prompts and responses only
 
 ![Prompt Engineering Evaluation](images/prompts.jpg "Prompts")
