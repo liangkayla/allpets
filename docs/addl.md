@@ -1,6 +1,6 @@
 # Additional Information
 
-This web app was deployed using AWS EC2. I initially ran out of storage while loading my models in, so I attached a volume to my virtual machine, where I store the base Phi-1.5 model.
+This web app was deployed using AWS EC2. I initially ran out of storage while loading my models in, so I attached a volume to my virtual machine, where I store the base Phi-1.5 model that I later load in the back-end of my application.
 
 ## Design Choices
 - When running inference on my text generation model (instruction fine-tuned Phi-1.5), a design choice I made was to use parameters repetition_penalty=1.2 and no_repeat_ngram_size=3. These are parameters added to reduce repetition in responses.

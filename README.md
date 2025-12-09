@@ -13,7 +13,7 @@ The ML models used in this web app may take up to a minute to generate text resp
 # Video Links
 [Project Demo](videos/project_demo.mp4)
 
-[Technical Walkthrough]()
+[Technical Walkthrough](videos/tech_walkthrough.mp4)
 
 # Evaluation
 Full Prompt Engineering Comparison Table
